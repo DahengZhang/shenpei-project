@@ -62,10 +62,20 @@ module.exports = {
             ]
         }, {
             test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-            loader: 'url-loader?limit=10000&minetype=application/font-woff'
+            loader: 'url-loader?limit=10000&minetype=application/font-woff',
+            options: {
+                limit: 1000,
+                name: 'static/font/[name].[hash:6].[ext]',
+                publicPath
+            }
         }, {
             test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-            loader: 'file-loader'
+            loader: 'file-loader',
+            options: {
+                limit: 1000,
+                name: 'static/font/[name].[hash:6].[ext]',
+                publicPath
+            }
         }, {
             test: /\.(png|jpe?g|gif)$/,
             exclude: /node_modules/,
