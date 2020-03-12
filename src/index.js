@@ -11,6 +11,9 @@ Vue.use(ElementUI)
 Vue.use(ajax)
 Vue.use(timer)
 
+Vue.config.devtools = process.env.NODE_ENV === 'development'
+Vue.config.performance = process.env.NODE_ENV === 'development'
+
 new Vue({
     router,
     render: h => h(App)

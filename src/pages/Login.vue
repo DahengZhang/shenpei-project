@@ -13,7 +13,7 @@
                     </el-input>
                 </el-form-item>
                 <el-form-item>
-                    <el-button @click="$router.push('/main/user')" type="primary" size="medium" class="login-btn">登录</el-button>
+                    <el-button @click="$router.push('/dashboard')" type="primary" size="medium" class="login-btn">登录</el-button>
                 </el-form-item>
             </el-form>
         </div>
